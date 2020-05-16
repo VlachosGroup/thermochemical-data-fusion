@@ -3,20 +3,20 @@
 List of files
 =============
 
-1) smiles_to_graphs.py
-    This file contains code to convert a list of smiles (read from a text file) to the data matrix.
-2) lasso_fits.py
-    This file contains the LASSO implementation used in the paper.
-3) bootstrap_error_estimation.py
-    This file can be used to generate a bootstrap sample of mean absolute error (MAE) for the model.
-4) helper_files.py
-    This file contains a list of plotting helper functions used in the paper.
-5) model_details.json
-    JSON file contains details of the three models (E-E, E-H and E-G) in the following pseudocode format:
+<br>1) smiles_to_graphs.py
+<br>&emsp;    This file contains code to convert a list of smiles (read from a text file) to the data matrix.
+<br>2) lasso_fits.py
+<br>&emsp;    This file contains the LASSO implementation used in the paper.
+<br>3) bootstrap_error_estimation.py
+<br>&emsp;    This file can be used to generate a bootstrap sample of mean absolute error (MAE) for the model.
+<br>4) helper_files.py
+<br>&emsp;    This file contains a list of plotting helper functions used in the paper.
+<br>5) model_details.json
+<br>&emsp;    JSON file contains details of the three models (E-E, E-H and E-G) in the following pseudocode format:
 
-<p>'electronic energy': {
-<br>&emsp;	'coeff': list(ee_model.model_.coef_),
-<br>&emsp;	'X_mean': list(ee_model.X_scaler.mean_),
+&emsp;<p>'electronic energy': {
+&emsp;<br>&emsp;	'coeff': list(ee_model.model_.coef_),
+&emsp;<br>&emsp;	'X_mean': list(ee_model.X_scaler.mean_),
 <br>&emsp;	'X_std': list(ee_model.X_scaler.scale_),
 <br>&emsp;	'y_mean': list(ee_model.y_scaler.mean_),
 <br>&emsp;	'y_std': list(ee_model.y_scaler.scale_)},
