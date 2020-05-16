@@ -14,9 +14,9 @@ List of files
 <br>5) model_details.json
 <br>&emsp;    JSON file contains details of the three models (E-E, E-H and E-G) in the following pseudocode format:
 
-&emsp;<p>'electronic energy': {
-&emsp;<br>&emsp;	'coeff': list(ee_model.model_.coef_),
-&emsp;<br>&emsp;	'X_mean': list(ee_model.X_scaler.mean_),
+<br>&emsp;'electronic energy': {
+<br>&emsp;&emsp;	'coeff': list(ee_model.model_.coef_),
+<br>&emsp;	'X_mean': list(ee_model.X_scaler.mean_),
 <br>&emsp;	'X_std': list(ee_model.X_scaler.scale_),
 <br>&emsp;	'y_mean': list(ee_model.y_scaler.mean_),
 <br>&emsp;	'y_std': list(ee_model.y_scaler.scale_)},
