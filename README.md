@@ -11,7 +11,7 @@ List of files
     This file can be used to generate a bootstrap sample of mean absolute error (MAE) for the model.
 4) helper_files.py
     This file contains a list of plotting helper functions used in the paper.
-5) 
+5) model_details.json
     JSON file contains details of the three models (E-E, E-H and E-G) in the following pseudocode format:
 
 <p>'electronic energy': {
