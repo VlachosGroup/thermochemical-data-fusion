@@ -13,8 +13,8 @@ List of files
     This file contains a list of plotting helper functions used in the paper.
 5) 
     JSON file contains details of the three models (E-E, E-H and E-G) in the following pseudocode format:
-
-'electronic energy': {
+\n
+'electronic energy': {\n
 	'coeff': list(ee_model.model_.coef_),
 	'X_mean': list(ee_model.X_scaler.mean_),
 	'X_std': list(ee_model.X_scaler.scale_),
