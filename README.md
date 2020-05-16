@@ -16,22 +16,22 @@ List of files
 
 <br>&emsp;'electronic energy': {
 <br>&emsp;&emsp;	'coeff': list(ee_model.model_.coef_),
-<br>&emsp;	'X_mean': list(ee_model.X_scaler.mean_),
-<br>&emsp;	'X_std': list(ee_model.X_scaler.scale_),
-<br>&emsp;	'y_mean': list(ee_model.y_scaler.mean_),
-<br>&emsp;	'y_std': list(ee_model.y_scaler.scale_)},
+<br>&emsp;&emsp;	'X_mean': list(ee_model.X_scaler.mean_),
+<br>&emsp;&emsp;	'X_std': list(ee_model.X_scaler.scale_),
+<br>&emsp;&emsp;	'y_mean': list(ee_model.y_scaler.mean_),
+<br>&emsp;&emsp;	'y_std': list(ee_model.y_scaler.scale_)},
 <br>
-<br>'enthalpy': {
-<br>&emsp;	'coeff': list(eh_model.model_.coef_),
-<br>&emsp;	'X_mean': list(eh_model.X_scaler.mean_),
-<br>&emsp;	'X_std': list(eh_model.X_scaler.scale_),
-<br>&emsp;	'y_mean': list(eh_model.y_scaler.mean_),
-<br>&emsp;	'y_std': list(eh_model.y_scaler.scale_)},
+<br>&emsp;'enthalpy': {
+<br>&emsp;&emsp;	'coeff': list(eh_model.model_.coef_),
+<br>&emsp;&emsp;	'X_mean': list(eh_model.X_scaler.mean_),
+<br>&emsp;&emsp;	'X_std': list(eh_model.X_scaler.scale_),
+<br>&emsp;&emsp;	'y_mean': list(eh_model.y_scaler.mean_),
+<br>&emsp;&emsp;	'y_std': list(eh_model.y_scaler.scale_)},
 <br>
-<br>'free energy': 	{
-<br>&emsp;	'coeff': list(eg_model.model_.coef_),
-<br>&emsp;	'X_mean': list(eg_model.X_scaler.mean_),
-<br>&emsp;	'X_std': list(eg_model.X_scaler.scale_),
-<br>&emsp;	'y_mean': list(eg_model.y_scaler.mean_),
-<br>&emsp;	'y_std': list(eg_model.y_scaler.scale_)}
-</p>
+<br>&emsp;'free energy': 	{
+<br>&emsp;&emsp;	'coeff': list(eg_model.model_.coef_),
+<br>&emsp;&emsp;	'X_mean': list(eg_model.X_scaler.mean_),
+<br>&emsp;&emsp;	'X_std': list(eg_model.X_scaler.scale_),
+<br>&emsp;&emsp;	'y_mean': list(eg_model.y_scaler.mean_),
+<br>&emsp;&emsp;	'y_std': list(eg_model.y_scaler.scale_)}
+
