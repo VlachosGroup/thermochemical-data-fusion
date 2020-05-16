@@ -3,15 +3,15 @@
 List of files
 =============
 
-<br>1) <b>smiles_to_graphs.py<b/>
+<br>1) <b>smiles_to_graphs.py</b>
 <br>&emsp;    This file contains code to convert a list of smiles (read from a text file) to the data matrix.
-<br>2) <b>lasso_fits.py<b/>
+<br>2) <b>lasso_fits.py</b>
 <br>&emsp;    This file contains the LASSO implementation used in the paper.
-<br>3) <b>bootstrap_error_estimation.py<b/>
+<br>3) <b>bootstrap_error_estimation.py</b>
 <br>&emsp;    This file can be used to generate a bootstrap sample of mean absolute error (MAE) for the model.
-<br>4) <b>helper_files.py<b/>
+<br>4) <b>helper_files.py</b>
 <br>&emsp;    This file contains a list of plotting helper functions used in the paper.
-<br>5) <b>model_details.json<b/>
+<br>5) <b>model_details.json</b>
 <br>&emsp;    JSON file contains details of the three models (E-E, E-H and E-G) in the following pseudocode format:
 <br>&emsp;'electronic energy': {
 <br>&emsp;&emsp;	'coeff': list(ee_model.model_.coef_),
