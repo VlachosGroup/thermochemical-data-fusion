@@ -45,11 +45,10 @@ from lasso_fits import Model
 
 if __name__ == '__main__':
     parser = ArgumentParser()
-    parser.add_argument('task',
+    parser.add_argument('--model', help='Path of the stored Model.p')
+    parser.add_argument('--task',
                         help="['electronic energy', enthalpy', 'free energy']")
-    parser.add_argument('--x_train', help='Path of X_train.p')
     parser.add_argument('--x_test', help='Path of X_test.p')
-    parser.add_argument('--y_train', help='Path of y_train.p')
     parser.add_argument('--y_test', help='Path of y_test.p')
     parser.add_argument('--draw_size', type=int, default=1000,
                         help='size of the draw (int). Default 1000')
@@ -57,11 +56,12 @@ if __name__ == '__main__':
                         help='M parameter (see notes). Default 100000')
     args = parser.parse_args()
 
-    DRAW_SIZE = args.draw_size
-    M = args.m
+    model_path = args.model
     TASK = args.task
     X_test_path = args.x_test
     y_test_path = args.y_test
+    DRAW_SIZE = args.draw_size
+    M = args.m
 
     # for labeling and color
     task_dict = {

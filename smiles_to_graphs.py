@@ -194,7 +194,7 @@ if __name__ == "__main__":
     parser.add_argument('smiles_file',
                         help='Path of .txt file containing smiles')
     parser.add_argument(
-        '--min_graph_lengthe',
+        '--min_graph_length',
         type=int,
         default=1,
         help='Minimum subgraph edge-size. Default is 1.')

@@ -11,6 +11,7 @@ import copy
 import datetime
 import os.path
 import pickle
+from pprint import pprint
 
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
@@ -22,7 +23,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 import yaml
 # these are simple plotting methods.
-from helper_files import plot_parity, pretty_plot, plot_density, plot_bivariate
+from helper_files import plot_parity, plot_density, plot_bivariate, pretty_plot
 
 
 class Model:
@@ -61,7 +62,10 @@ class Model:
             self.do_lasso( **train_params)
         else:
             raise NotImplemented(f'{training_algo} is not implemented!!')
-        self.evaluate_model(self.X_train, self.y_train)
+        self.evaluate_model(
+            self.X_train,
+            self.y_train,
+            plot_color=train_params.get('plot_color'))
 
     def test_(self, X_test, y_test, **test_params):
         y_test = y_test.reshape(-1, 1)
@@ -73,7 +77,7 @@ class Model:
             y_test = self.y_scaler.transform(y_test)
         self.mode_ = 'test'
         self.evaluate_model(
-            X_test, y_test, plot_color=test_params.get('plot_color', 'red'))
+            X_test, y_test, plot_color=test_params.get('plot_color'))
 
     def evaluate_model(self, X, y, plot_color):
         y_pred = self.model_.predict(X)
@@ -212,6 +216,7 @@ if __name__ == '__main__':
     # load stuff
     configs = yaml.load(open(config_path, "r"), Loader=yaml.FullLoader)
     testing_data = configs['testing_data']
+    plot_color = testing_data.get('plot_color', None)
 
     if mode == 'train':
         training_data = configs['training_data']
@@ -239,8 +244,6 @@ if __name__ == '__main__':
             get_learning_curve=training_parameters.get(
                 'get_learning_curve', False),
             cross_valid_iters=training_parameters.get('cross_valid_iters', 2))
-        model.test_(X_test, y_test)
-        model.plot_learning_curve(X_test, y_test)
         if training_parameters.get('store_model', False):
             d = datetime.datetime.today()
             model_path = os.path.join(
@@ -254,15 +257,14 @@ if __name__ == '__main__':
         # testing
         print('Operating in Testing Mode')
         model_path = testing_data.get('model', None)
-        plot_color = testing_data.get('plot_color', None)
         if model_path is None:
             print('No model path specified!')
             exit()
         model = pickle.load(open(model_path, "rb"))
         X_test = pickle.load(open(testing_data['X'], "rb"))
         y_test = pickle.load(open(testing_data['y'], "rb"))
-        model.test_(X_test, y_test, plot_color=plot_color)
-        model.plot_learning_curve(X_test, y_test, plot_color=plot_color)
+    model.test_(X_test, y_test, plot_color=plot_color)
+    model.plot_learning_curve(X_test, y_test, plot_color=plot_color)
 
 
 

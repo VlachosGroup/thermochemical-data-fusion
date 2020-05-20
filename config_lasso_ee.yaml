@@ -1,0 +1,21 @@
+---
+training_parameters:
+  algorithm: 'lasso'
+  cross_validation_folds: 10
+  get_learning_curve: True
+  cross_valid_iters: 100
+  store_model: True # if set, the model is pickled to the same dir as trainign data
+
+training_data:
+  X: 'D:\Research\Error_DFT\Data_fusion\Random_subset_training\Pickles\X_train.p'
+  y: 'D:\Research\Error_DFT\Data_fusion\Random_subset_training\Pickles\y_train_u0_ee_kcal.p'
+  target_label: 'E-E'
+testing_data:
+  X: 'D:\Research\Error_DFT\Data_fusion\Random_subset_training\Pickles\X_test.p'
+  y: 'D:\Research\Error_DFT\Data_fusion\Random_subset_training\Pickles\y_test_u0_ee_kcal.p'
+
+random_seeds:
+  l_curve_seed: 421
+  #split_from_training:  # if set , testing data is split from training data
+  #  test_size: 0.50
+  #  random_state: 4
