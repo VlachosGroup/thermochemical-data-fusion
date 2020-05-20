@@ -33,4 +33,6 @@ List of files
 <br>&emsp;&emsp;	'X_std': list(eg_model.X_scaler.scale_),
 <br>&emsp;&emsp;	'y_mean': list(eg_model.y_scaler.mean_),
 <br>&emsp;&emsp;	'y_std': list(eg_model.y_scaler.scale_)}
+<br>6) <b>train_mols.txt and test_mols.txt</b>
+<br>&emsp;    Ids of train and test molecules. Nomenlature follows the indexing used in QM9.
 
